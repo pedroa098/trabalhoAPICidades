@@ -13,6 +13,7 @@
             <div>
                 <form action="" method="post" class="search-form">
                     <input  type="text" name="name" id="name" placeholder="Cidade" class="search-input">
+                    <button class="botao">Pesquisar</button>
                 </form>
             </div>
         </header>
