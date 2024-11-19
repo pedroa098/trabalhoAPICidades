@@ -1,26 +1,33 @@
 /* style/style.css */
 
+html{
+    background-image: url("../images/city.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 100vh;
+    width: 100vw;
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("../images/city.jpg");
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    backdrop-filter: blur(1);
     color: #333;
 }
 
 header {
     background: rgb(3,137,230);
     background: linear-gradient(90deg ,rgb(3 137 230 / 0%) 0%, rgb(16 114 168 / 11%) 100%);
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
-    border-bottom:2px solid black;
 }
 
 .search-form {
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .search-input {
@@ -160,6 +167,10 @@ main {
     overflow-x: auto;
 }
 
+.search-form{
+    width: 90%;
+}
+
 .city-name {
     font-size: 20px;
     font-weight: 600;
@@ -169,7 +180,7 @@ main {
 
 .search-input {
     padding: 12px;
-    width: 250px;
+    width: 60%;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
@@ -192,16 +203,10 @@ main {
     color: #555;
 }
 
-.pollution-table th {
-    background-color: rgba(202,67,6,1);
-    color: #fff;
-}
-
 .pollution-table td {
     background-color: #fafafa;
 }
 }
-
 .botao {
     background-color: #267ECA;
     color: #fff;

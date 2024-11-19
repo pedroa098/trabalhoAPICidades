@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API</title>
+    <title>Pesquisa cidades</title>
     <link rel="stylesheet" href="style/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"/>
@@ -12,7 +12,7 @@
         <header>
             <div>
                 <form action="" method="post" class="search-form">
-                    <input  type="text" name="name" id="name" placeholder="Cidade" class="search-input">
+                    <input type="text" name="name" id="name" placeholder="Cidade" class="search-input">
                     <button class="botao">Pesquisar</button>
                 </form>
             </div>
@@ -88,26 +88,15 @@
                             break;
                     }
 
-                    // return json_encode("{ 
-                    //     status: '1', 
-                    //     quality: $quality, 
-                    //     qualityClass: $qualityClass, 
-                    //     recommendation: $recommendation, 
-                    //     airQuality: $airQuality,
-                    //     lat: $lat,
-                    //     lon: $lon,
-                    //     cityName: $cityName,
-                    // }");
+              
                 }
                 else {
                     $airError = "Informações sobre a qualidade do ar não foram encontradas";
-                    //return json_encode("{ status: '2', error: $airError, }");
                 }
             }
         }
         else{
             $geoError = "Nenhuma cidade encontrada";
-            //return json_encode("{ status: '3', error: $geoError, }");
         }
 
     }
