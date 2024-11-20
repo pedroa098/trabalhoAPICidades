@@ -1,12 +1,5 @@
 /* style/style.css */
 
-html{
-    background-image: url("../images/city.jpg");
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    height: 100vh;
-    width: 100vw;
-}
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -15,8 +8,7 @@ body {
     background-image: url("../images/city.jpg");
     background-size: cover; 
     background-repeat: no-repeat; 
-    height: 100vh;
-    width: 100vw;
+    backdrop-filter: blur(1);
     color: #333;
 }
 
@@ -96,6 +88,69 @@ main {
     padding: 15px;
     border-radius: 4px;
     margin-bottom: 20px;
+    width: 70%;
+}
+
+.cores-indicacoes{
+    display: flex;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+
+}
+
+.sq-good{
+    border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    background-color: green;
+    border: 1px solid black;
+}
+.sq-fair{
+    border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(117, 158, 37);
+    border: 1px solid black;
+}
+.sq-moderate{
+    height: 15px;
+    border-radius: 4px;
+    width: 15px;
+    background-color: rgb(138, 138, 10);
+    border: 1px solid black;
+}
+.sq-poor{
+    height: 15px;
+    border-radius: 4px;
+    border: 1px solid black;
+    width: 15px;
+    background-color: #CD3333;
+}
+.sq-very-poor{
+    border: 1px solid black;
+    border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    background-color: #ff0000;
+}
+
+.subtitles-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.subtitles{
+    margin-left: 5px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 30%;
 }
 
 .quality-title {
@@ -103,17 +158,19 @@ main {
     font-weight: 500;
     margin-bottom: 10px;
 }
-
+.quality-and-info{
+    display: flex;
+}
 .quality-good {
     color: green;
 }
 
 .quality-fair {
-    color: rgb(117, 158, 37);
+    color: #759e25;
 }
 
 .quality-moderate {
-    color: rgb(138, 138, 10);
+    color: #8a8a0a;
 }
 
 .quality-poor {
@@ -140,7 +197,7 @@ main {
 }
 
 .pollution-table th {
-    background-color: #267ECA;
+    background-color:unset;
     color: #fff;
 }
 
@@ -167,10 +224,24 @@ main {
     max-width: 600px;
 }
 
+@media (max-width:629px){
+.quality-and-info{
+    display: block;
+}
+.quality-box{
+    width: 93%;
+}
+.subtitles{
+    width: 135px;
+}
+}
+
 @media (max-width: 425px) {
 .responsive {
     overflow-x: auto;
 }
+
+
 
 .search-form{
     width: 90%;
